@@ -1,4 +1,13 @@
 SortedNews::Application.routes.draw do
+  get "sort/comments"
+  get "sort/domain"
+  get "sort/headline_length"
+  # resources :headline_length, :as => 'headline-length'
+  # resources :headline_length, :path => '/headline-length'
+  # resources "headline-length", :as => :headline_length, :controller => :sort
+  match "sort/headline-length" => "sort#headline_length"
+  get "home/index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +57,7 @@ SortedNews::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 
