@@ -1,2 +1,6 @@
-<h1>Sort#headline-length</h1>
-<p>Find me in app/views/sort/headline-length.html.erb</p>
+<% @array.each { |x| %>
+	<p>Title: <%= x.title %></p>
+	<a href="<%= x.link %>"><%= x.link %></a>
+	<p>Num comments: <%= x.comments %> </p>
+	<a>----------------------</a>
+<% } %>
